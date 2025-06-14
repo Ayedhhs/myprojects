@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>سويت بوتيك | الرئيسية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #fffdf8;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #e3f2fd, #f3faff);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #0d47a1;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .btn-main {
+      background: #1976d2;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .products-section {
+      padding: 3rem 2rem;
+      background-color: #fff3e0;
+    }
+
+    .products-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #d84315;
+    }
+
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 220px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .products-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الشريط العلوي -->
+  <div id="header-container"></div>
+
+  <!-- البانر -->
+  <section class="hero">
+    <h1>ذوّبنا لك أحلى النكهات</h1>
+    <p>اكتشف تجربة حلويات لا تُنسى 🎉</p>
+    <a href="#products" class="btn-main">ابدأ التذوق</a>
+  </section>
+
+  <!-- المنتجات -->
+  <section id="products" class="products-section">
+    <h2>منتجاتنا المختارة</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://cdn.3dicons.co/3d-icon-pack/3d-fluency/chocolate-bar-3d-fluency.png" alt="كيك الشوكولاتة">
+        <h3>كيك الشوكولاتة</h3>
+        <p>25 ر.س</p>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn.3dicons.co/3d-icon-pack/3d-fluency/date-fruit-3d-fluency.png" alt="معمول تمر">
+        <h3>معمول تمر</h3>
+        <p>15 ر.س</p>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn.3dicons.co/3d-icon-pack/3d-fluency/strawberry-3d-fluency.png" alt="تارت الفواكه">
+        <h3>تارت فواكه</h3>
+        <p>30 ر.س</p>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn.3dicons.co/3d-icon-pack/3d-fluency/cookie-3d-fluency.png" alt="كوكيز">
+        <h3>كوكيز بالشوكولاتة</h3>
+        <p>10 ر.س</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشريط السفلي -->
+  <div id="footer-container"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-container").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-container").innerHTML = data);
+  </script>
+</body>
+</html>
