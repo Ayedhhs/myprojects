@@ -8,47 +8,79 @@
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background-color: #fffdf8;
+      background-color: #f9f4ef;
       color: #333;
     }
 
+    header {
+      background-color: #1d4f91;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
     .hero {
-      background: linear-gradient(to right, #e3f2fd, #f3faff);
+      background: linear-gradient(to right, #e8eef5, #ffffff);
       text-align: center;
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      color: #0d47a1;
+      font-size: 2.7rem;
+      color: #1d4f91;
+      margin-bottom: 1rem;
     }
 
     .hero p {
       font-size: 1.2rem;
-      margin: 1rem 0;
+      margin-bottom: 1.5rem;
+      color: #4a4a4a;
     }
 
     .btn-main {
-      background: #1976d2;
+      background: #ff9800;
       color: white;
-      padding: 0.8rem 1.5rem;
+      padding: 0.9rem 1.8rem;
       border: none;
       border-radius: 8px;
       font-size: 1rem;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
       cursor: pointer;
     }
 
     .products-section {
+      background-color: #ffffff;
       padding: 3rem 2rem;
-      background-color: #fff3e0;
     }
 
     .products-section h2 {
       text-align: center;
       margin-bottom: 2rem;
-      color: #d84315;
+      font-size: 2rem;
+      color: #1d4f91;
     }
 
     .products-grid {
@@ -59,24 +91,37 @@
     }
 
     .product-card {
-      background: white;
+      background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      width: 230px;
       padding: 1rem;
       text-align: center;
       transition: transform 0.3s ease;
     }
 
     .product-card:hover {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .product-card img {
       width: 100px;
       height: 100px;
       object-fit: contain;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    footer {
+      background-color: #ff9800;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer a {
+      color: #fffde7;
+      margin: 0 0.5rem;
+      text-decoration: none;
     }
 
     @media (max-width: 600px) {
@@ -84,19 +129,33 @@
         flex-direction: column;
         align-items: center;
       }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- الشريط العلوي -->
-  <div id="header-container"></div>
+  <header>
+    <div class="logo">🍰 سويت بوتيك</div>
+    <nav>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#products">منتجاتنا</a></li>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- البانر -->
   <section class="hero">
-    <h1>ذوّبنا لك أحلى النكهات</h1>
-    <p>اكتشف تجربة حلويات لا تُنسى 🎉</p>
-    <a href="#products" class="btn-main">ابدأ التذوق</a>
+    <h1>أهلاً بك في عالم الذوق الرفيع</h1>
+    <p>حلويات طبيعية، طازجة، تصنع البهجة في كل لحظة 🍬</p>
+    <a href="#products" class="btn-main">استعرض منتجاتنا</a>
   </section>
 
   <!-- المنتجات -->
@@ -109,13 +168,13 @@
         <p>25 ر.س</p>
       </div>
       <div class="product-card">
-        <img src="https://cdn.3dicons.co/3d-icon-pack/3d-fluency/date-fruit-3d-fluency.png" alt="معمول تمر">
-        <h3>معمول تمر</h3>
+        <img src="https://cdn.3dicons.co/3d-icon-pack/3d-fluency/date-fruit-3d-fluency.png" alt="معمول التمر">
+        <h3>معمول التمر</h3>
         <p>15 ر.س</p>
       </div>
       <div class="product-card">
         <img src="https://cdn.3dicons.co/3d-icon-pack/3d-fluency/strawberry-3d-fluency.png" alt="تارت الفواكه">
-        <h3>تارت فواكه</h3>
+        <h3>تارت الفواكه</h3>
         <p>30 ر.س</p>
       </div>
       <div class="product-card">
@@ -125,18 +184,18 @@
       </div>
     </div>
   </section>
-  
+
   <!-- الشريط السفلي -->
-  <div id="footer-container"></div>
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة - سويت بوتيك</p>
+    <div>
+      <a href="#">📷 Instagram</a>
+      |
+      <a href="#">📱 WhatsApp</a>
+    </div>
+  </footer>
 
-  <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("header-container").innerHTML = data);
-
-    fetch("footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-container").innerHTML = data);
-  </script>
 </body>
 </html>
+
+
