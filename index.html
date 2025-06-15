@@ -4,157 +4,17 @@
   <meta charset="UTF-8">
   <title>سويت بوتيك | الرئيسية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #f9f4ef;
-      color: #333;
-    }
-
-    header {
-      background-color: #1d4f91;
-      color: white;
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .hero {
-      background: linear-gradient(to right, #e8eef5, #ffffff);
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.7rem;
-      color: #1d4f91;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: #4a4a4a;
-    }
-
-    .btn-main {
-      background: #ff9800;
-      color: white;
-      padding: 0.9rem 1.8rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: bold;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .products-section {
-      background-color: #ffffff;
-      padding: 3rem 2rem;
-    }
-
-    .products-section h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      color: #1d4f91;
-    }
-
-    .products-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    .product-card {
-      background: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      width: 230px;
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: scale(1.04);
-    }
-
-    .product-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 0.8rem;
-    }
-
-    footer {
-      background-color: #ff9800;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    footer a {
-      color: #fffde7;
-      margin: 0 0.5rem;
-      text-decoration: none;
-    }
-
-    @media (max-width: 600px) {
-      .products-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- الشريط العلوي -->
-  <header>
-    <div class="logo">🍰 سويت بوتيك</div>
-    <nav>
-      <ul>
-        <li><a href="#">الرئيسية</a></li>
-        <li><a href="#products">منتجاتنا</a></li>
-        <li><a href="#">تواصل معنا</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header-container"></div>
 
   <!-- البانر -->
   <section class="hero">
-    <h1>أهلاً بك في عالم الذوق الرفيع</h1>
-    <p>حلويات طبيعية، طازجة، تصنع البهجة في كل لحظة 🍬</p>
+    <h1>ذوّبنا لك أحلى النكهات</h1>
+    <p>حلويات فاخرة مصنوعة من الحب والذوق الرفيع 🍬</p>
     <a href="#products" class="btn-main">استعرض منتجاتنا</a>
   </section>
 
@@ -186,16 +46,16 @@
   </section>
 
   <!-- الشريط السفلي -->
-  <footer>
-    <p>© 2025 جميع الحقوق محفوظة - سويت بوتيك</p>
-    <div>
-      <a href="#">📷 Instagram</a>
-      |
-      <a href="#">📱 WhatsApp</a>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-container").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-container").innerHTML = data);
+  </script>
 </body>
 </html>
-
-
