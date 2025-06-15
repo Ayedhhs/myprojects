@@ -1,11 +1,72 @@
-<header style="background-color: #43a047; color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Tajawal', sans-serif;">
-  <div style="font-size: 1.8rem; font-weight: bold;">🍰 سويت بوتيك</div>
-  <nav>
-    <ul style="list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0;">
-      <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">الرئيسية</a></li>
-      <li><a href="#products" style="color: white; text-decoration: none; font-weight: bold;">منتجاتنا</a></li>
-      <li><a href="about_me.html" style="color: white; text-decoration: none; font-weight: bold;">👤 من نحن</a></li>
-      <li><a href="#" style="color: white; text-decoration: none; font-weight: bold;">تواصل معنا</a></li>
-    </ul>
-  </nav>
+<!-- header.html -->
+<link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  header {
+    background-color: #43a047;
+    color: #fff;
+    font-family: "Harmattan", sans-serif;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .logo-title {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+
+  .logo-title img {
+    height: 50px;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #c8e6c9;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  }
+</style>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-title">
+      <span>متجر الحلويات</span>
+      <img src="حلويات.png" alt="شعار الحلويات" />
+    </div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="about_me.html">من نحن</a>
+      <a href="products.html">المنتجات</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+  </div>
 </header>
